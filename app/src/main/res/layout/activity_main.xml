@@ -28,6 +28,7 @@
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="@string/box_two"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/boxOneText" />
@@ -72,5 +73,69 @@
 
         app:layout_constraintStart_toEndOf="@+id/boxTwoText"
         app:layout_constraintTop_toBottomOf="@+id/boxFourText" />
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_wide"
+        android:fontFamily="@font/roboto"
+        android:text="@string/how_to_play"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/infoText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/tap_the_boxes_and_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelText"
+        app:layout_constraintTop_toBottomOf="@+id/boxTwoText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/button_red"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yellowButton"
+        app:layout_constraintEnd_toStartOf="@+id/yellowButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/yellowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/button_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/greenButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/redButton"
+        app:layout_constraintTop_toBottomOf="@+id/labelText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/greenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_green"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yellowButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yellowButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

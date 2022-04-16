@@ -24,24 +24,27 @@ class MainActivity : AppCompatActivity() {
             R.id.boxThreeText -> view.setBackgroundColor(Color.BLUE)
             R.id.boxFourText -> view.setBackgroundColor(Color.MAGENTA)
             R.id.boxFiveText -> view.setBackgroundColor(Color.BLUE)
+            R.id.redButton -> binding.boxThreeText.setBackgroundResource(R.color.my_red)
+            R.id.yellowButton -> binding.boxFourText.setBackgroundResource(R.color.my_yellow)
+            R.id.greenButton -> binding.boxFiveText.setBackgroundResource(R.color.my_green)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
 
-    fun setListener() {
+    private fun setListener() {
         val clickableViews: List<View> = listOf(
             binding.boxOneText,
             binding.boxTwoText,
             binding.boxThreeText,
             binding.boxFourText,
             binding.boxFiveText,
-            binding.constraintLayout
+            binding.constraintLayout,
+            binding.redButton,
+            binding.yellowButton,
+            binding.greenButton
         )
-        for (item in clickableViews){
+        for (item in clickableViews) {
             item.setOnClickListener { makeColored(it) }
         }
-
     }
-
-
 }
